@@ -5,7 +5,7 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -20,7 +20,26 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
 gem 'jquery-rails'
+
+group :tools do
+	gem 'guard-rspec' # automatically runs our tests whenever there have been changes made to them
+end
+
+group :development do
+	gem 'rspec-rails','~>2.0' #using rspect instead of test unit
+	gem 'better_errors' #makes errors we see more descriptive
+	gem 'binding_of_caller'
+	gem 'pry-rails'
+end
+
+group :test do
+	gem 'rspec-rails','~>2.0'
+	gem 'factory_girl_rails'
+	gem 'capybara'
+	gem 'selenium-webdriver'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
