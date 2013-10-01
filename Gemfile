@@ -32,6 +32,7 @@ group :development do
 	gem 'better_errors' #makes errors we see more descriptive
 	gem 'binding_of_caller'
 	gem 'pry-rails'
+	gem 'pry'
 end
 
 group :test do
