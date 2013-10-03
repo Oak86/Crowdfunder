@@ -48,7 +48,7 @@ describe "Project List" do
 			expect(page).to have_selector('.navbar ul li.active a', text: "Projects")
 
 			#On a project's show page, the Project's nav element should be active
-			click_link 'Project 1'
+			click_link('Project 1')
 			expect(page).to have_selector('.navbar ul li.active a', text: "Projects")
 		end
 	end
